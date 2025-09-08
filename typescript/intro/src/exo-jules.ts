@@ -1,5 +1,10 @@
 import { isEven } from "./exos/exo1";
 import { sortByWordLength } from "./exos/exo10";
+import { factorial } from "./exos/exo11";
+import { isPalindrome } from "./exos/exo12";
+import { secondLargest } from "./exos/exo13";
+import { fizzBuzz } from "./exos/exo14";
+import { removeDuplicate } from "./exos/exo15";
 import { countVowels } from "./exos/exo2";
 import { reverseArray } from "./exos/exo3";
 import { longestWord } from "./exos/exo4";
@@ -47,3 +52,19 @@ console.log(letterFrequency("Hello"));
 
 //10)
 console.log(sortByWordLength("Le langage TypeScript est puissant"));
+
+//11)
+console.log(factorial(5));
+
+//12)
+console.log(isPalindrome("kayak"));
+console.log(isPalindrome("bonjour"));
+
+//13)
+console.log(secondLargest([10, 5, 8, 20]));
+
+//14)
+console.log(fizzBuzz(15));
+
+//15)
+console.log(removeDuplicate([1, 2, 2, 3, 1]));
