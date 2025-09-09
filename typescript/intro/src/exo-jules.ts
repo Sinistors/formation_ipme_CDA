@@ -5,6 +5,7 @@ import { isPalindrome } from "./exos/exo12";
 import { secondLargest } from "./exos/exo13";
 import { fizzBuzz } from "./exos/exo14";
 import { removeDuplicate } from "./exos/exo15";
+import { wordCount } from "./exos/exo16";
 import { countVowels } from "./exos/exo2";
 import { reverseArray } from "./exos/exo3";
 import { longestWord } from "./exos/exo4";
@@ -68,3 +69,8 @@ console.log(fizzBuzz(15));
 
 //15)
 console.log(removeDuplicate([1, 2, 2, 3, 1]));
+
+//16)
+console.log(wordCount("Le langage TypeScript est puissant"));
+
+//17)

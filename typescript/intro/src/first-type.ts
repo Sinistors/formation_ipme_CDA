@@ -1,3 +1,5 @@
+// import IGenre from "./interface/steamish/IGenre";
+
 let myString: string = "allo";
 console.log(myString);
 
@@ -54,3 +56,10 @@ function addition(a: number, b: number): number
     return a + b;
 }
 console.log(addition(1,2));
+
+// fetch('https://steam-ish.test-02.drosalys.net/api/genre')
+//     .then((response: Response): Promise<any> => {
+//         return response.json()
+//     }).then((data:Array<IGenre>):void => {
+
+//     });
