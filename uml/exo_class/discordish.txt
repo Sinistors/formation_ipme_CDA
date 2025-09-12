@@ -1,0 +1,24 @@
+Vous devez modéliser le diagramme de classe d’une application de discussion en ligne (comme Discord), appelons la : Chaotish.
+Je ne vous donne aucun attributs, ni méthodes, c’est à vous de les ajouter, soyez précis.
+
+Voici les particularités du processus dont vous aurez besoin :
+
+Il faudra obligatoirement gérer des utilisateurs, ils pourront s’inscrire en fournissant un e-mail et un nom unique. Par la suite il peut modifier son nom d’affichage, 
+son mot de passe et son image. Il peut ajouter d’autres utilisateurs en ami, en recherchant leur nom unique, s’il n’existe pas, rien ne se passe, 
+sinon la demande est envoyée à l’autre utilisateur.
+Une fois la demande d’ami envoyée, l’autre utilisateur aura une notification et pourra accepter, refuser ou ignorer la demande, 
+deux utilisateurs sont réellement amis lorsque la demande a été accepté.
+
+L’application doit permettre à l’utilisateur de se créer des serveurs, un serveur est obligatoirement composé d’une image et d’un nom.
+
+Un serveur va posséder plusieurs salons vocaux, et salons écrits.
+Un salon écrit est simplement un échange de message entre les utilisateurs. Un message est composé d’une date soumission, du contenu du message, du nom de son auteur. 
+Il est possible à un utilisateur de mettre un message qui est soit une réponse à un message précis, soit simplement une réponse au fil de message. 
+Il peut aussi modifier son message ou même le supprimer.
+
+On doit pouvoir ajouter des réactions sur les messages, qui sont simplement des émoticônes, mais les utilisateurs ne peuvent mettre qu’une seule fois la même réaction sur un message 
+et ils peuvent mettre plusieurs réactions, différentes, par message. On souhaitera conserver l’information de qui a mis quelle réaction sur un message.
+
+On doit pouvoir gérer les droits des utilisateurs par serveur, par défaut un utilisateur qui créer un serveur est administrateur dessus. Toujours avec cette optique de droits, 
+un admin peut gérer les droits des différents utilisateurs sur son serveur, il peut aussi ajouter de nouveaux droits. Il peut inviter d’autres utilisateurs à rejoindre son serveur, 
+une invitation est un lien généré pour une durée de 24h, toute personne cliquant dessus, peut donc rejoindre le serveur.

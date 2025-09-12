@@ -101,7 +101,6 @@ if (gameDiv != null)
                 "<p>Date de publication : " + game.released + "</p>"; 
             }
         }
-
     }); 
 }
 

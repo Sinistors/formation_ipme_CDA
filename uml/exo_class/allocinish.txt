@@ -1,0 +1,15 @@
+Vous devez modéliser le diagramme de classe d’un site web de réservation de places de cinéma en ligne (comme AlloCiné), je ne vous donne aucun attribut, ni méthodes, c’est à vous de les ajouter, soyez précis.
+
+Voici les particularités du processus dont vous aurez besoin :
+
+L’utilisateur peut avoir une carte de réduction, il s’agit de sa carte de retraité, de demandeur d’emploi ou étudiante, afin de bénéficier de réduction. On demandera à l’utilisateur d’envoyer une image de celle-ci pour qu’elle soit validé, on souhaitera quand même définir une date de validité de celle-ci, tous les mois afin de vérifier que l’utilisateur ai toujours la carte en question. On ne souhaite pas conserver l’historique des cartes de réduction de l’utilisateur, cependant on souhaite pouvoir moduler les réductions offertes par la carte.
+
+L’utilisateur peut réserver plusieurs tickets pour différents films, dans une commande. Il peut aussi réserver plusieurs tickets pour des films diffusés dans différents cinémas, à chaque fois il devra choisir un siège dans la salle. Un siège est représenté par son numéro, et chaque salle a sa propre numérotation pour ses sièges.
+
+Note site propose plusieurs cinémas Clermontois, nous avons eu un partenariat avec tous, mais nous avons l’ambition de nous agrandir, et ajouter d’autres cinémas en dehors de la ville. Un cinéma peut avoir plusieurs salles, mais une salle est toujours liée à un cinéma
+
+Un film peut être diffusé dans plusieurs salles du cinéma, mais à des horaires différents, dans une langue différente (VF, VO). Une salle peut diffuser plusieurs films différents au cours de la journée. Afin de facilité la recherche à l’utilisateur, on veut lui permettre de consulter les films en avant-première plus facilement.
+
+Une fois que le client a payé son ticket de cinéma, il sera sauvegardé dans les commandes du client, afin de garder une trace de ses tickets achetés. On souhaite aussi lui laisser la possibilité de précommander des « snacks », comme des KitKat, M&Ms, popcorn et des boissons, non-alcoolisés, au moment où il paie sa commande. Ainsi il pourra retirer sa commande une fois arrivé sur place. Cependant, tous les cinémas ne proposent pas cette prestation, il ne faudra pas la proposer pour les cinémas ne le faisant pas.
+
+Afin de fidéliser le client, on propose un abonnement mensuel, permettant d’avoir 15% de réduction sur ses places. Il n’y a qu’un seul type d’abonnement, au même prix et ce peu importe sa durée d’effectivité. On aimerait faire des campagnes de promo, et permettre que pendant une certaine période de l’année, toutes les personnes ayant un abonnement puissent bénéficier d’une réduction supplémentaire pouvant aller jusqu’à 30%.
