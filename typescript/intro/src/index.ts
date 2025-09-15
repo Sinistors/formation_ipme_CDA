@@ -1,5 +1,6 @@
 //import "./first-type";
-import "./steamish";
+//import "./steamish";
+import "./cours_class";
 
 // import "./exo-jules";
 // import { correctAnswers, options, questions } from "./question";
