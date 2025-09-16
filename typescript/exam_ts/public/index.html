@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Examen TypeScript</title>
+</head>
+<body>
+  <h1>Gestion de sélection</h1>
+
+  <label for="fruitSelect">Choisissez un fruit :</label>
+  <select id="fruitSelect" data-fruit-select>
+    <option value="Pomme">Pomme</option>
+    <option value="Banane">Banane</option>
+    <option value="Cerise">Cerise</option>
+    <option value="Mangue">Mangue</option>
+  </select>
+
+  <button id="addBtn" data-add-btn>Ajouter</button>
+
+  <h2>Liste de fruits choisis :</h2>
+  <ul id="fruitList" data-fruit-list></ul>
+
+  <p id="counter" data-counter>Total : 0 fruit(s)</p>
+
+  <script src="bundle.js"></script>
+</body>
+</html>

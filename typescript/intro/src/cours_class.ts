@@ -127,6 +127,9 @@ import { Caracteristic } from "./class/Caracteristic";
 import { Soin } from "./class/Soin";
 import { Drink } from "./class/Drink";
 import { DrinkOrder } from "./class/DrinkOrder";
+import { Guerrier } from "./class/heros/Guerrier";
+import { Healer } from "./class/heros/Healer";
+import { Farm } from "./class/farm/Farm";
 
 // Caractéristiques
 const parfumée = new Caracteristic("Parfumée");
@@ -177,3 +180,14 @@ order.addDrink(hotChocolate);
 order.addDrink(juice);
 
 console.log("Total avec réduction : " + order.totalPrice() + "€");
+
+
+let guerrier1: Guerrier = new Guerrier("Jules"); 
+console.log(guerrier1);
+let healer1: Healer = new Healer("Fabien"); 
+console.log(healer1);
+healer1.sayHello();   
+guerrier1.attack(healer1);
+
+let farm:Farm = new Farm(5);
+farm.startProduction(30, 600);
