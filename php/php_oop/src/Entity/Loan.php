@@ -1,6 +1,12 @@
 <?php
 namespace App\Entity;
-
+enum Status
+{
+    case PENDING;
+    case RETURNED;
+    case RETURNEDLATE;
+    case LATE;
+}
 class Loan
 {
     private \DateTime $borrowedAt;
@@ -20,6 +26,38 @@ class Loan
         $dueDate = (clone $this->borrowedAt)->modify('+2 weeks');
 
         return $dueDate;
+    }
+
+    public function isExpired(): bool
+    {
+        $now = new \DateTime();
+        return $now > $this->getDueDate();
+    }
+
+    public function getStatus(): Status
+    {
+        if ($this->returnedAt === null)
+        {
+            if ($this->isExpired())
+            {
+                return Status::LATE;
+            }
+            else
+            {
+                return Status::PENDING;
+            }
+        }
+        else
+        {
+            if ($this->returnedAt > $this->getDueDate())
+            {
+                return Status::RETURNEDLATE;
+            }
+            else
+            {
+                return Status::RETURNED;
+            }
+        }
     }
 
     public function getBorrowedAt(): \DateTime

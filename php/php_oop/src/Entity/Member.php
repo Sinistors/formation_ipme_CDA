@@ -1,10 +1,16 @@
 <?php
 namespace App\Entity;
-class Member
+use App\Interface\ISaveable;
+use App\Trait\Saving;
+
+class Member implements ISaveable, \JsonSerializable
 {
     private string $firstName;
     private string $lastName;
     private string $email;
+    private array $loans = [];
+
+    use Saving;
 
 
     public function __construct(string $firstName, string $lastName, string $email)
@@ -12,7 +18,9 @@ class Member
         $this->setFirstName($firstName);
         $this->setLastName($lastName);
         $this->setEmail($email);
+        $this->createdAt = new \DateTime();
     }
+
 
     public function getFullname(): string
     {
@@ -22,6 +30,26 @@ class Member
     public function __toString(): string
     {
         return "Nom : " . $this->lastName . "\nPrénom : " . $this->firstName . "\nemail : " . $this->email;
+    }
+
+    public function loanMedia(Media $media): Loan
+    {
+        $loan = new Loan($media, $this);
+        $this->loans[] = $loan;
+        return $loan;
+    }
+
+    public function returnMedia(Media $media): Loan | null
+    {
+        foreach ($this->loans as $i => $loan)
+        {
+            if ($loan->getMedia() == $media)
+            {
+                $loan->setReturnedAt(new \DateTime());
+                return array_splice($this->loans, $i, 1)[0];
+            }
+        }
+        return null;
     }
 
     public function getFirstName(): string
@@ -55,5 +83,10 @@ class Member
         {
             $this->email = $email;
         }
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return json_encode($this);
     }
 }
