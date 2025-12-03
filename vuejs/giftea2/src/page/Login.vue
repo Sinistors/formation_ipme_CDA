@@ -37,7 +37,7 @@ export default defineComponent({
 
       localStorage.setItem('token', response.data.token);
 
-      this.$router.push("/");
+      this.$router.push("/dashboard");
     }
   }
 })

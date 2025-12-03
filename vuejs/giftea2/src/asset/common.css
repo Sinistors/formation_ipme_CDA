@@ -1,0 +1,38 @@
+body{
+  font-weight: 300;
+  font-size: 1rem;
+}
+.tab{
+  width: 80%;
+  @media (width < 1000px) {
+    width: 90%;
+  }
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tab-header h1{
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.tab-header p{
+  margin: 0;
+}
+
+.pink{
+  color: deeppink;
+}
+
+.remove-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+
